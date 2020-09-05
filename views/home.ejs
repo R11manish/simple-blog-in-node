@@ -1,0 +1,13 @@
+<%- include('partials/header'); -%>
+<h1>Home</h1>
+<p> <%= data1 %></p>
+<br>
+<h1 align="center">Posts</h1>
+
+<% posts.forEach(function(element){ %>
+    <br>
+    <h1><a href="/posts/<%= element.head %>"><%= element.head %></a></h1>
+    <p><%=element.description.substring(0,385) %>....</p>
+<% });  %>
+<br>
+<%- include('partials/footer'); -%>
